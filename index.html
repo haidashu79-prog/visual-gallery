@@ -156,11 +156,11 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px dotted #3a4351}
 <div class="wrap">
   <header>
     <h1>视觉素材图鉴 <em>·</em> 海大叔版</h1>
-    <p class="sub">两个源合一：<b>239 条</b>动效 / 运镜 / 画风术语 + <b>3686 条</b>中文绘画提示词（海报 / 建筑 / 美食 / 产品 / 直播画面全在里面），都配效果图，搜到就能抄。动效那部分还挂了 1318 个中文口语别名，"推近""甩镜""逆光"都能搜到。<br><span style="color:#ffb066">日本题材与日文原文已全部剔除，全站素材零日文假名。</span></p>
+    <p class="sub">两个源合一：<b>239 条</b>动效 / 运镜 / 画风术语 + <b>3504 条</b>中文绘画提示词（海报 / 建筑 / 美食 / 产品 / 直播画面全在里面），都配效果图，搜到就能抄。动效那部分还挂了 1318 个中文口语别名，"推近""甩镜""逆光"都能搜到。<br><span style="color:#ffb066">日本题材与日文原文已全部剔除，全站素材零日文假名。</span></p>
     <div class="stat">
       <div><b id="sCount">0</b> 条条目</div>
       <div><b>动效 239</b> · <b>提示词 <span id="pCount">0</span></b></div>
-      <div><b>已剔除</b> 日本题材 1767 · 日文原文 428 · 擦边 720</div>
+      <div><b>已剔除</b> 日本题材 1949 · 日文原文 428 · 擦边 720</div>
       <div>双源 MIT 开源 · 中文检索增强</div>
     </div>
   </header>
@@ -207,7 +207,7 @@ footer a{color:var(--dim);text-decoration:none;border-bottom:1px dotted #3a4351}
     动效素材来源：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener">showheyohtaki/motion-prompt</a>（MIT，作者 Shohei Ohtaki）· 中文名/释义/提问示例为上游官方简体中文版 ·
     <a href="https://showheyohtaki.github.io/motion-prompt/" target="_blank" rel="noopener">官方演示站</a><br>
     绘画提示词来源：<a href="https://github.com/BaYue-SYJ/shuixian-prompts" target="_blank" rel="noopener">BaYue-SYJ/shuixian-prompts</a>（开源中文提示词库，原库 6601 条，效果图外链 R2）·
-    <b>已剔除日文原文 428 条、日本角色向题材 1767 条、擦边低俗 720 条，入册 3686 条；另有 143 条通用题材（国风海报、建筑、人像等）原分类名误挂日本题材分类，已改归中性分类保留。动效源同步剔除日本传统题材 1 条，正文日文示例文案已全部汉化为中文</b><br>
+    <b>已剔除日文原文 428 条、日本题材 1949 条、擦边低俗 720 条，入册 3504 条；另有 143 条通用题材（国风海报、建筑、人像等）原分类名误挂日本题材分类，已改归中性分类保留。动效源同步剔除日本传统题材 1 条，正文日文示例文案已全部汉化为中文</b><br>
     本页仅做中文检索增强、去日文化清洗与场景归类，未改动上游文案；动效条目附加的中文口语别名（共 1318 个）为本页自建，非上游内容 · 机器可读数据：<a href="styles.json">styles.json</a> · <a href="prompts.js">prompts.js</a>
   </footer>
 </div>
@@ -262,7 +262,7 @@ const packZh = {}; packs.forEach(p=>packZh[p.pack]=p.zh);
 const MOTION_N = items.length;
 
 /* ===== 第二数据源：中文绘画提示词库（BaYue-SYJ/shuixian-prompts） =====
-   已在生成阶段剔除：日文原文 428 条、日本角色向题材 1767 条、擦边低俗 720 条 */
+   已在生成阶段剔除：日文原文 428 条、日本题材 1949 条（含二次补剔 182 条）、擦边低俗 720 条 */
 const CDN2 = "https://r2.qqsrc.com/";
 (window.PROMPTS||[]).forEach(function(x){
   items.push({
